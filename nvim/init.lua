@@ -41,10 +41,18 @@ local plugins = {
 	{	
 		"nvim-treesitter/nvim-treesitter", 
 		build = ":TSUpdate"
+	},
+	{
+		"rose-pine/neovim", 
+		name = "rose-pine",
+		lazy = false,
+		priority = 1000
 	}
 }
 
 require("lazy").setup(plugins)
+
+vim.cmd[[colorscheme rose-pine]]
 
 require("lualine").setup {
 	options = {
@@ -59,3 +67,5 @@ require("nvim-treesitter.configs").setup {
 	highlight = { enable = true },
 	indent = { enable = true },
 }
+
+
