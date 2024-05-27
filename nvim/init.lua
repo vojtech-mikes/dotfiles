@@ -34,7 +34,16 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
-
+	{
+		'nvim-lualine/lualine.nvim',
+		dependencies = { 'nvim-tree/nvim-web-devicons' }
+	}
 }
 
 require("lazy").setup(plugins)
+
+require("lualine").setup {
+	options = {
+		theme = "16color"
+	}
+}
