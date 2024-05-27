@@ -37,6 +37,10 @@ local plugins = {
 	{
 		'nvim-lualine/lualine.nvim',
 		dependencies = { 'nvim-tree/nvim-web-devicons' }
+	},
+	{	
+		"nvim-treesitter/nvim-treesitter", 
+		build = ":TSUpdate"
 	}
 }
 
@@ -46,4 +50,12 @@ require("lualine").setup {
 	options = {
 		theme = "16color"
 	}
+}
+
+require("nvim-treesitter.configs").setup {
+	ensure_installed = {"lua"},
+	sync_install = false,
+	auto_install = false,
+	highlight = { enable = true },
+	indent = { enable = true },
 }
