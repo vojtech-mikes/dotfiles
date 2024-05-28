@@ -38,7 +38,7 @@ local plugins = {
 		'nvim-lualine/lualine.nvim',
 		dependencies = { 'nvim-tree/nvim-web-devicons' }
 	},
-	{	
+	{
 		"nvim-treesitter/nvim-treesitter", 
 		build = ":TSUpdate"
 	},
@@ -47,6 +47,11 @@ local plugins = {
 		name = "rose-pine",
 		lazy = false,
 		priority = 1000
+	},
+	{
+		'nvim-telescope/telescope.nvim',
+		branch = "0.1.x",
+		dependencies = { 'nvim-lua/plenary.nvim' }
 	}
 }
 
@@ -68,4 +73,9 @@ require("nvim-treesitter.configs").setup {
 	indent = { enable = true },
 }
 
+local builtin = require('telescope.builtin')
 
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
