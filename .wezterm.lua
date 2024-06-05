@@ -1,5 +1,5 @@
 local config = {
-	font_size = 20
+	font_size = 16,
 }
 
 return config
