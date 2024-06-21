@@ -1,5 +1,3 @@
-# My Super Duper Dotfiles
-
 ## Notes
 
 - install it with gnu stow :)
