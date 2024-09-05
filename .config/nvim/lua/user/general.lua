@@ -2,9 +2,6 @@ vim.schedule(function()
   vim.opt.clipboard = 'unnamedplus'
 end)
 
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
-
 vim.opt.relativenumber = true
 
 vim.opt.mouse = 'a'
@@ -32,3 +29,6 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.highlight.on_yank()
   end,
 })
+
+vim.opt.tabstop=4
+vim.opt.shiftwidth=4
