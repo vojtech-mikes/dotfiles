@@ -2,6 +2,8 @@ vim.schedule(function()
   vim.opt.clipboard = 'unnamedplus'
 end)
 
+vim.opt.termguicolors = true
+
 vim.opt.relativenumber = true
 
 vim.opt.mouse = 'a'
