@@ -5,8 +5,7 @@ return {
 	opts = {
 		ensure_installed = {
 			"lua",
-			"go",
-			"zig",
+			"python",
 		},
 		sync_install = true,
 		highlight = {
