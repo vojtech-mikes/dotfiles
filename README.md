@@ -11,6 +11,7 @@ Prerekvizity
 - fd
 - ripgrep
 - fzf
+- node
 
 Instalace pomocí stow
 

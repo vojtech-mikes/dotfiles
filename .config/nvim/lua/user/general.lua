@@ -25,6 +25,10 @@ vim.opt.updatetime = 250
 
 vim.opt.timeoutlen = 300
 
+vim.opt.list = true
+
+vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
+
 vim.api.nvim_create_autocmd("TextYankPost", {
 	group = vim.api.nvim_create_augroup("custom-highlight-yank", { clear = true }),
 	callback = function()
