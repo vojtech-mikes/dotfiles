@@ -1,3 +1,9 @@
+Obsahuje konfig pro
+
+- neovim
+- tmux
+- alacritty
+
 Prerekvizity
 
 - git
