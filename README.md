@@ -3,6 +3,7 @@ Obsahuje konfig pro
 - neovim
 - tmux
 - alacritty
+- zsh
 
 Prerekvizity
 
