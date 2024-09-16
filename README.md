@@ -4,3 +4,7 @@ Prerekvizity
 - fd
 - ripgrep
 - fzf
+
+Instalace pomocí stow
+
+https://www.gnu.org/software/stow/
