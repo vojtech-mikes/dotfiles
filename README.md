@@ -1,6 +1,5 @@
 Obsahuje konfig pro
 
-- alacritty
 - zsh
 
 Instalace pomocí stow
