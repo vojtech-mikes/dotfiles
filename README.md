@@ -1,6 +1,8 @@
 Obsahuje konfig pro
 
 - zsh
+- alacritty
+- nvim
 
 Instalace pomocí stow
 
