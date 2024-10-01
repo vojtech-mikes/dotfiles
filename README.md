@@ -11,6 +11,7 @@ Taky potřebuješ
 - black
 - isort
 - stylua
+- p10k
 
 Instalace pomocí stow
 
