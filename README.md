@@ -1,7 +1,7 @@
 Obsahuje konfig pro
 
 - zsh
-- alacritty
+- kitty
 - nvim
 
 Taky potřebuješ
