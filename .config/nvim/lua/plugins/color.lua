@@ -1,6 +1,7 @@
 return {
-	'thimc/gruber-darker.nvim',
+	"rose-pine/neovim",
+	name = "rose-pine",
 	config = function()
-		vim.cmd.colorscheme('gruber-darker')
-	end
+		vim.cmd.colorscheme("rose-pine")
+	end,
 }
