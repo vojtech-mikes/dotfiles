@@ -7,6 +7,7 @@ Obsahuje konfig pro
 Taky potřebuješ
 
 - fzf
+- fd
 - ripgrep
 - black
 - isort
