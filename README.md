@@ -6,6 +6,9 @@ Obsahuje konfig pro
 
 Taky potřebuješ
 
+> Tyto dependence se instalují přes brew. Pokud jsi na Linuxu tak si je budeš muset nainstalovat pomocí jiného package manageru, nebo si stáhnout brew pro Linux, ale jiný package manager bude lepší volba.
+
+- stow
 - fzf
 - fd
 - ripgrep
