@@ -10,6 +10,7 @@ brew install ripgrep
 brew install black
 brew install isort
 brew install stylua
+brew install stow
 
 echo "Installing p10k"
 
