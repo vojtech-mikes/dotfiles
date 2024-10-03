@@ -14,7 +14,7 @@ Taky potřebuješ
 - stylua
 - p10k
 
-Všechny dependence můžeš nainstalovat pomocí chell scriptu `setup.sh`
+Všechny dependence můžeš nainstalovat pomocí shell scriptu `setup.sh`
 
 ```bash
 # Add rwx permission to the current user
