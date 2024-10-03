@@ -1,8 +1,8 @@
 Obsahuje konfig pro
 
-- zsh
-- kitty
-- nvim
+- zsh https://www.zsh.org/
+- kitty https://sw.kovidgoyal.net/kitty/#
+- nvim https://neovim.io/
 
 Taky potřebuješ
 
