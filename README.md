@@ -3,6 +3,7 @@ Obsahuje konfig pro
 - zsh https://www.zsh.org/
 - kitty https://sw.kovidgoyal.net/kitty/#
 - nvim https://neovim.io/
+- starship.rs https://starship.rs/
 
 Taky potřebuješ
 
@@ -15,7 +16,7 @@ Taky potřebuješ
 - black
 - isort
 - stylua
-- p10k
+- starship
 
 Všechny dependence můžeš nainstalovat pomocí shell scriptu `setup.sh`
 
