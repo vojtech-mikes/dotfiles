@@ -1,12 +1,8 @@
 // Zed settings
-//
-// For information on how to configure Zed, see the Zed
-// documentation: https://zed.dev/docs/configuring-zed
-//
-// To see all of Zed's default settings without changing your
-// custom settings, run `zed: open default settings` from the
-// command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "features": {
+    "inline_completion_provider": "none"
+  },
   "base_keymap": "JetBrains",
   "buffer_font_features": {
     "calt": false
@@ -16,7 +12,7 @@
   "theme": {
     "mode": "system",
     "light": "Andromeda",
-    "dark": "One Dark"
+    "dark": "Gruber Darker"
   },
   "vim_mode": true,
   "relative_line_numbers": true,
@@ -30,5 +26,11 @@
         }
       }
     }
+  },
+  "chat_panel": { "button": false },
+  "notification_panel": { "button": false },
+  "assistant": { "button": false, "version": "2" },
+  "collaboration_panel": {
+    "button": false
   }
 }
