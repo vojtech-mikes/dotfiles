@@ -32,5 +32,6 @@
   "assistant": { "button": false, "version": "2" },
   "collaboration_panel": {
     "button": false
-  }
+  },
+  "cursor_blink": false
 }
