@@ -20,5 +20,3 @@ eval "$(starship init zsh)"
 
 autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
-
-alias nvim=vim
