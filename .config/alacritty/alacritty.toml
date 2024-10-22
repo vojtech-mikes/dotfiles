@@ -1,0 +1,10 @@
+[font]
+size=18
+normal= {family="FiraCode Nerd Font Mono"}
+
+[cursor]
+style= {shape="Block", blinking="Off"}
+
+[mouse]
+hide_when_typing= true
+
