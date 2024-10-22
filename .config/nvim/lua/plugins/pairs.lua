@@ -1,1 +1,6 @@
-return { 'echasnovski/mini.pairs', version = false, opts={} }
+return { 
+	'echasnovski/mini.pairs', 
+	version = false, 
+	opts={} 
+}
+
