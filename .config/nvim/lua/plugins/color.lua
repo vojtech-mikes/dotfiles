@@ -1,11 +1,8 @@
 return {
-	"catppuccin/nvim",
-	name = "catppuccin",
+	"thimc/gruber-darker.nvim",
 	priority = 1000,
-	opts = {
-		flavor = "mocha",
-	},
+	opts = {},
 	config = function()
-		vim.cmd.colorscheme("catppuccin")
+		vim.cmd.colorscheme("gruber-darker")
 	end,
 }
