@@ -4,7 +4,6 @@ return {
 	main = "nvim-treesitter.configs",
 	opts = {
 		ensure_installed = {
-			"python",
 			"bash",
 			"c",
 			"diff",
@@ -17,9 +16,11 @@ return {
 			"vim",
 			"vimdoc",
 		},
+		auto_install = true,
 		highlight = {
 			enable = true,
+			additional_vim_regex_highlighting = { "ruby" },
 		},
-		indent = { enable = true },
+		indent = { enable = true, disable = { "ruby" } },
 	},
 }
