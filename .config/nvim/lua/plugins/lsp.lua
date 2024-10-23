@@ -7,7 +7,30 @@ return {
 		"hrsh7th/cmp-nvim-lsp",
 	},
 	config = function()
-		-- vim.api.nvim_create_autocmd("LspAttach", {})
+		vim.api.nvim_create_autocmd("LspAttach", {
+			callback = function()
+				-- Go to definition
+				vim.keymap.set("n", "gd", function()
+					vim.lsp.buf.definition()
+				end)
+				-- Rename symbol
+				vim.keymap.set("n", "rs", function()
+					vim.lsp.buf.rename()
+				end)
+				-- Go to declaration
+				vim.keymap.set("n", "gD", function()
+					vim.lsp.buf.declaration()
+				end)
+				-- Go to declaration
+				vim.keymap.set("n", "gD", function()
+					vim.lsp.buf.declaration()
+				end)
+				-- Display references
+				vim.keymap.set("n", "dr", function()
+					vim.lsp.buf.references()
+				end)
+			end,
+		})
 
 		local capabilities = vim.lsp.protocol.make_client_capabilities()
 		capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
