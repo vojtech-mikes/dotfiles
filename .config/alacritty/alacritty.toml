@@ -1,7 +1,7 @@
 import=["./themes/catppuccin_frappe.toml"]
 
 [font]
-size=18
+size=16
 normal= {family="FiraCode Nerd Font Mono"}
 
 [cursor]
@@ -9,6 +9,10 @@ style= {shape="Block", blinking="Off"}
 
 [mouse]
 hide_when_typing= true
+
+[window]
+dimensions = { columns = 110, lines = 35 }
+
 
 # Default colors
 [colors.primary]
