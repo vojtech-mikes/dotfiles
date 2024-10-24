@@ -10,7 +10,10 @@ In progress for eternity
 - ripgrep
 - fd
 - starship
-- wezterm
+- allacritty
+- black
+- miniconda
+- NerdFont
 
 ## Installation
 
