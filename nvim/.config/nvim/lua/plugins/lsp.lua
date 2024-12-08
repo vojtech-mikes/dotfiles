@@ -39,8 +39,18 @@ return {
 		local capabilities = vim.lsp.protocol.make_client_capabilities()
 		capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
 
-		require 'lspconfig'.lua_ls.setup {}
-		require 'lspconfig'.pyright.setup {}
+		local servers = {
+			"lua_ls",
+			"pyright"
+		}
+
+		for i = 1, #servers do
+			local lsp = require 'lspconfig'[servers[i]]
+
+			if lsp then
+				lsp.setup {}
+			end
+		end
 
 		-- https://neovim.io/doc/user/lsp.html#lsp-config
 		vim.api.nvim_create_autocmd('LspAttach', {
