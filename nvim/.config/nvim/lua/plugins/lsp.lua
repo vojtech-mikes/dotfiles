@@ -63,12 +63,20 @@ return {
 					return
 				end
 
+				if client.supports_method('textDocument/rename') then
+					vim.keymap.set("n", "rn", vim.lsp.buf.rename)
+				end
+
+				if client.supports_method('textDocument/diagnostics') then
+					vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
+				end
+
 				if client.supports_method('textDocument/formatting') then
 					-- Format the current buffer on save
 					vim.api.nvim_create_autocmd('BufWritePre', {
 						buffer = args.buf,
 						callback = function()
-							vim.lsp.buf.format({ bufnr = args.buf, id = client.id })
+							vim.lsp.buf.format({ bufnr = buffer, id = client.id })
 						end,
 					})
 				end

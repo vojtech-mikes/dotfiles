@@ -19,8 +19,6 @@ return {
 
 		vim.keymap.set("n", "<leader>of", builtin.oldfiles, { desc = "Search old files" })
 
-		vim.keymap.set("n", "<leader>dd", builtin.diagnostics, { desc = "Show diagnostics" })
-
 		vim.keymap.set("n", "<leader>fr", builtin.lsp_references, { desc = "Find references" })
 
 		vim.keymap.set("n", "<leader>fd", builtin.lsp_definitions, { desc = "Find definitions" })
