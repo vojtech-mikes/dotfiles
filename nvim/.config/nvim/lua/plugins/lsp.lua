@@ -71,6 +71,10 @@ return {
 					vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 				end
 
+				if client.supports_method('textDocument/definition') then
+					vim.keymap.set("n", 'gd', vim.lsp.buf.definition, { desc = "Go to definition" })
+				end
+
 				if client.supports_method('textDocument/formatting') then
 					-- Format the current buffer on save
 					vim.api.nvim_create_autocmd('BufWritePre', {
