@@ -16,34 +16,12 @@ return {
 			'williamboman/mason.nvim',
 			opts = {}
 		},
-		{ 'hrsh7th/cmp-nvim-lsp' },
-		{ 'hrsh7th/cmp-path' },
-		{ 'hrsh7th/cmp-buffer' },
 		{
-			'hrsh7th/nvim-cmp',
-			config = function()
-				local cmp = require("cmp")
-
-				cmp.setup {
-					mapping = cmp.mapping.preset.insert({
-						['<C-b>'] = cmp.mapping.scroll_docs(-4),
-						['<C-f>'] = cmp.mapping.scroll_docs(4),
-						['<C-Space>'] = cmp.mapping.complete(),
-						['<C-e>'] = cmp.mapping.abort(),
-						['<CR>'] = cmp.mapping.confirm({ select = true }),
-					}),
-					sources = cmp.config.sources({
-						{ name = 'nvim_lsp' },
-						{ name = 'path' },
-						{ name = 'buffer' }
-					})
-				}
-			end
+			'saghen/blink.cmp'
 		}
 	},
 	config = function()
-		local capabilities = vim.lsp.protocol.make_client_capabilities()
-		capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
+		local capabilities = require('blink.cmp').get_lsp_capabilities()
 
 		local servers = {
 			"lua_ls",
@@ -54,7 +32,7 @@ return {
 			local lsp = require 'lspconfig'[servers[i]]
 
 			if lsp then
-				lsp.setup {}
+				lsp.setup { capabilities = capabilities }
 			end
 		end
 
