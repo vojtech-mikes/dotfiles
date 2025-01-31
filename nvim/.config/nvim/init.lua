@@ -1,10 +1,6 @@
 require("config.lazy")
 require("vojta.keymaps")
-
-vim.opt.shiftwidth = 4
-vim.opt.clipboard = "unnamedplus"
-vim.opt.number = true
-vim.opt.relativenumber = true
+require("vojta.general")
 
 --- For sourcing the config quickly, then comment it out
 vim.keymap.set("n", "<space><space>x", "<cmd>source %<CR>")
