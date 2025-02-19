@@ -19,5 +19,9 @@ return {
 	    builtin.find_files({cwd=vim.fn.stdpath('config')})
 	end, { desc = 'Telescope edit config files' })
 
+	vim.keymap.set('n', '<leader>ft', function ()
+	    vim.cmd("TodoTelescope")
+	end, { desc = 'Show all TODOs '})
+
     end
 }

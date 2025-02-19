@@ -1,12 +1,11 @@
 return {
-  'comfysage/evergarden',
+  "catppuccin/nvim",
   priority = 1000,
+  name = "catppuccin",
   opts = {
-    transparent_background = true,
-    variant = 'hard',
-    overrides = { },
+      flavour = "mocha"
   },
   config = function ()
-    vim.cmd.colorscheme "evergarden"
+    vim.cmd.colorscheme "catppuccin"
   end
 }
