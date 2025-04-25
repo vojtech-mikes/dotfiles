@@ -12,7 +12,7 @@ return {
 	vim.keymap.set('n', '<leader>fo', builtin.oldfiles, { desc = 'Telescope oldfiles' })
 
 	vim.keymap.set('n', '<leader>ff', function ()
-	    builtin.find_files({hidden=true})
+	    builtin.find_files({hidden=true, no_ignore=true})
 	end, { desc = 'Telescope find files' })
 
 	vim.keymap.set('n', '<leader>fc', function ()
