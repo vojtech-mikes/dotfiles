@@ -17,13 +17,6 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
-# Use pactl to adjust volume in PulseAudio.
-set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
-
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -163,12 +156,19 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Turn on alt shift keyboard language change
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec_always setxkbmap -option 'grp:alt_shift_toggle' -layout us,cz -variant ,qwerty
+exec_always --no-startup-id setxkbmap -option 'grp:alt_shift_toggle' -layout us,cz -variant ,qwerty
 
 bar {
-    status_command i3status
+    status_command SCRIPT_DIR=~/.config/i3blocks/scripts i3blocks
     position top
 }
 
-exec_always feh --bg-scale $HOME/Pictures/ferrari_hammilton.jpg
+exec_always --no-startup-id feh --bg-scale $HOME/Pictures/mountaints.jpg
+
+
+exec --no-startup-id pulseaudio --start
+
+# change volume or toggle mute
+bindsym XF86AudioRaiseVolume exec amixer -q -D pulse sset Master 5%+ && pkill -RTMIN+10 i3blocks 
+bindsym XF86AudioLowerVolume exec amixer -q -D pulse sset Master 5%- && pkill -RTMIN+10 i3blocks
+bindsym XF86AudioMute exec amixer -q -D pulse sset Master toggle && pkill -RTMIN+10 i3blocks
