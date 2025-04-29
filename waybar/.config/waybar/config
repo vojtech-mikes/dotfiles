@@ -1,0 +1,39 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 24,
+  "spacing": 5,
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["hyprland/window"],
+  "modules-right": [
+    "network",
+    "bluetooth",
+    "cpu",
+    "memory",
+    "battery",
+    "pulseaudio",
+    "clock",
+    ],
+  "sway/window": {
+    "max-lenght": 50,
+  },
+  "cpu" : {
+    "format": "CPU: {usage}%"
+  },
+  "memory": {
+    "format": "MEM: {used:0.1f}G/{total:0.1f}G"
+  },
+  "battery": {
+    "format": "BAT: {capacity}%"
+  },
+  "pulseaudio": {
+    "format": "VOL: {volume}%"
+  },
+  "clock": {
+    "format": "{:%H:%M:%OS}",
+    "interval": 5
+  },
+  "network":{
+    "format-wifi": "SSID: {essid} {signalStrength}%"
+  }
+}
