@@ -1,7 +1,7 @@
 {
   "layer": "top",
   "position": "top",
-  "height": 32,
+  "height": 38,
   "spacing": 5,
   "modules-left": ["hyprland/workspaces"],
   "modules-right": [
@@ -30,7 +30,7 @@
     "format": "VOL: {volume}%"
   },
   "clock": {
-    "format": "{:%H:%M:%OS}",
+    "format": "{:%d-%m-%Y :%H:%M:%OS}",
     "interval": 5
   },
   "network":{
