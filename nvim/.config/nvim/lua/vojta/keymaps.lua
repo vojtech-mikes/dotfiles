@@ -10,3 +10,4 @@ vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower win
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
 ---vim.keymap.set('n', 'gd', require('telescope.builtin').lsp_definitions, { desc = '[G]oto [D]efinition' })
+vim.keymap.set('n', 'gd', "<cmd>lua vim.lsp.buf.definition()<CR>", { desc = '[G]oto [D]efinition' })
