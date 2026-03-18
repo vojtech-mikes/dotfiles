@@ -1,4 +1,7 @@
-local lsps_config = {lua_ls = {}}
+local lsps_config = {
+    lua_ls = {},
+    pyright = {}
+}
 
 local function load_lsps(lsp_config)
     for server, config in pairs(lsp_config) do
