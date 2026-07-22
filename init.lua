@@ -9,7 +9,7 @@ vim.o.relativenumber = true
 
 vim.o.mouse = 'a'
 
-vim.o.showmode = true
+vim.o.showmode = false
 
 vim.schedule(function() vim.o.clipboard = 'unnamedplus' end)
 
@@ -42,9 +42,9 @@ vim.o.shiftwidth = 4
 
 -- Packages
 vim.pack.add({
-	"https://github.com/stevearc/oil.nvim",
-	"https://github.com/nvim-treesitter/nvim-treesitter",
-	"https://github.com/blazkowolf/gruber-darker.nvim"
+	{ src = "https://github.com/stevearc/oil.nvim", name = "oil"},
+	{ src = "https://github.com/nvim-treesitter/nvim-treesitter", name = "ts"},
+	{ src = "https://github.com/nvim-mini/mini.nvim", name = "mini"}
 })
 
 require("oil").setup({
@@ -67,4 +67,14 @@ vim.api.nvim_create_autocmd('FileType', {
 
 vim.keymap.set("n", "<space>ec", "<CMD>e " .. vim.fn.stdpath("config") .. "/init.lua<CR>", { desc = "Open config file"})
 
-vim.cmd.colorscheme("gruber-darker")
+vim.api.nvim_create_autocmd('TextYankPost', {
+	desc = 'Highlight when yanking (copying) text',
+	group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
+	callback = function() vim.hl.on_yank() end,
+})
+
+myminis = {"mini.statusline", "mini.pairs", "mini.surround", "mini.cmdline"}
+
+for i = 1, #myminis do
+	require(myminis[i]).setup()
+end
