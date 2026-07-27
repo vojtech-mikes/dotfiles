@@ -44,7 +44,8 @@ vim.o.shiftwidth = 4
 vim.pack.add({
 	{ src = "https://github.com/stevearc/oil.nvim", name = "oil"},
 	{ src = "https://github.com/nvim-treesitter/nvim-treesitter", name = "ts"},
-	{ src = "https://github.com/nvim-mini/mini.nvim", name = "mini"}
+	{ src = "https://github.com/nvim-mini/mini.nvim", name = "mini"},
+	{ src = "https://github.com/rose-pine/neovim", name = "rosepine"}
 })
 
 require("oil").setup({
@@ -52,6 +53,8 @@ require("oil").setup({
 		show_hidden = true
 	}
 })
+
+vim.cmd.colorscheme("rose-pine")
 
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
@@ -73,8 +76,14 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 	callback = function() vim.hl.on_yank() end,
 })
 
+-- Tohle je mozna blbost, ale zatim to tu necham protoze to funguje.
 myminis = {"mini.statusline", "mini.pairs", "mini.surround", "mini.cmdline"}
 
 for i = 1, #myminis do
 	require(myminis[i]).setup()
 end
+
+if vim.g.have_nerd_font then
+	require("mini.icons").setup()
+end
+
