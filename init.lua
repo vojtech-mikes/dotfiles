@@ -40,12 +40,33 @@ vim.o.confirm = true
 vim.o.tabstop = 4
 vim.o.shiftwidth = 4
 
+
 -- Packages
 vim.pack.add({
 	{ src = "https://github.com/stevearc/oil.nvim", name = "oil"},
 	{ src = "https://github.com/nvim-treesitter/nvim-treesitter", name = "ts"},
 	{ src = "https://github.com/nvim-mini/mini.nvim", name = "mini"},
-	{ src = "https://github.com/rose-pine/neovim", name = "rosepine"}
+	{ src = "https://github.com/rose-pine/neovim", name = "rosepine"},
+	{ src = 'https://github.com/neovim/nvim-lspconfig', name = "lspconfig" },
+	{ src = 'https://github.com/folke/lazydev.nvim', name = "lazydev"},
+	{ src = 'https://github.com/saghen/blink.lib', name = "blinklib"},
+	{ src = "https://github.com/saghen/blink.cmp", name = "blinkcmp"}
+})
+
+-- blink setup
+local cmp = require('blink.cmp')
+
+cmp.build():pwait()
+cmp.setup()
+
+
+require("lazydev").setup({
+	ft = "lua",
+	library = {
+        -- See the configuration section for more details
+        -- Load luvit types when the `vim.uv` word is found
+        { path = "${3rd}/luv/library", words = { "vim%.uv" } },
+    }
 })
 
 require("oil").setup({
@@ -54,11 +75,23 @@ require("oil").setup({
 	}
 })
 
+-- LSP INIT PART
+vim.lsp.enable('lua_ls')
+
+-- HANDY thingies
+
+vim.keymap.set("n", "<space>sd", function()
+		vim.diagnostic.setloclist()
+		vim.cmd("lopen")
+	end
+)
+
+
 vim.cmd.colorscheme("rose-pine")
 
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
-grammars = {"python"}
+local grammars = {"python"}
 
 require("nvim-treesitter").setup()
 require("nvim-treesitter").install(grammars)
@@ -77,7 +110,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 -- Tohle je mozna blbost, ale zatim to tu necham protoze to funguje.
-myminis = {"mini.statusline", "mini.pairs", "mini.surround", "mini.cmdline"}
+local myminis = {"mini.statusline", "mini.pairs", "mini.surround", "mini.cmdline"}
 
 for i = 1, #myminis do
 	require(myminis[i]).setup()
