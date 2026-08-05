@@ -3,7 +3,7 @@ vim.loader.enable()
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
-vim.g.have_nerd_font = false
+vim.g.have_nerd_font = true
 
 vim.o.relativenumber = true
 
@@ -56,6 +56,7 @@ vim.pack.add({
 -- blink setup
 local cmp = require('blink.cmp')
 
+---@diagnostic disable-next-line: undefined-field
 cmp.build():pwait()
 cmp.setup()
 
@@ -77,8 +78,9 @@ require("oil").setup({
 
 -- LSP INIT PART
 vim.lsp.enable('lua_ls')
+vim.lsp.enable('pyright')
 
--- HANDY thingies
+-- HANDY LSP thingies
 
 vim.keymap.set("n", "<space>sd", function()
 		vim.diagnostic.setloclist()
