@@ -77,8 +77,12 @@ require("oil").setup({
 })
 
 -- LSP INIT PART
-vim.lsp.enable('lua_ls')
-vim.lsp.enable('pyright')
+
+lsps = {"lua_ls", "pyright"}
+
+for i = 1, #lsps do
+	vim.lsp.enable(lsps[i])
+end
 
 -- HANDY LSP thingies
 
@@ -87,7 +91,6 @@ vim.keymap.set("n", "<space>sd", function()
 		vim.cmd("lopen")
 	end
 )
-
 
 vim.cmd.colorscheme("rose-pine")
 
