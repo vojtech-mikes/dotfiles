@@ -96,7 +96,7 @@ vim.cmd.colorscheme("rose-pine")
 
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
-local grammars = {"python"}
+local grammars = {"python", "lua"}
 
 require("nvim-treesitter").setup()
 require("nvim-treesitter").install(grammars)
