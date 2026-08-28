@@ -4,9 +4,7 @@ Tyhle dotfiles jsou myšlené jen pro mě, takže configy se můžou zdát jako 
 
 ## Setup
 
-Nechci používat [GNU Stow](https://www.gnu.org/software/stow/) takže k tomu mám vlastní setup.sh script, který vezme soubory v daném adresáři a vytvoří sym linky v
-`$HOME/.config/<program_config_home>/<config>`
-
+Používám GNU Stow takže tak..., pokud máš nutkání používat moje dotfiles tak nejjednodušší cesta je `man stow`
 
 ## Deps
 
