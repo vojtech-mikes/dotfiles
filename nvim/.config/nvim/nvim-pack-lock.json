@@ -8,6 +8,10 @@
       "rev": "c8fdc12c8a2fab6cf786dd7141a283f8079f902b",
       "src": "https://github.com/saghen/blink.lib"
     },
+    "gruberdarker": {
+      "rev": "83d99c0eb0fa2513fa5268d097194801fad26660",
+      "src": "https://github.com/blazkowolf/gruber-darker.nvim"
+    },
     "lazydev": {
       "rev": "ff2cbcba459b637ec3fd165a2be59b7bbaeedf0d",
       "src": "https://github.com/folke/lazydev.nvim"
@@ -19,6 +23,10 @@
     "mini": {
       "rev": "8d86a057fa14681cf7cab74ea7cba894a0abe14f",
       "src": "https://github.com/nvim-mini/mini.nvim"
+    },
+    "nord": {
+      "rev": "80c1e5321505aeb22b7a9f23eb82f1e193c12470",
+      "src": "https://github.com/shaunsingh/nord.nvim"
     },
     "oil": {
       "rev": "b73018b75affd13fa38e2fc94ef753b465f770d7",

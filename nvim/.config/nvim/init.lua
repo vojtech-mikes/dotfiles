@@ -46,11 +46,11 @@ vim.pack.add({
 	{ src = "https://github.com/stevearc/oil.nvim", name = "oil"},
 	{ src = "https://github.com/nvim-treesitter/nvim-treesitter", name = "ts"},
 	{ src = "https://github.com/nvim-mini/mini.nvim", name = "mini"},
-	{ src = "https://github.com/rose-pine/neovim", name = "rosepine"},
 	{ src = 'https://github.com/neovim/nvim-lspconfig', name = "lspconfig" },
 	{ src = 'https://github.com/folke/lazydev.nvim', name = "lazydev"},
 	{ src = 'https://github.com/saghen/blink.lib', name = "blinklib"},
-	{ src = "https://github.com/saghen/blink.cmp", name = "blinkcmp"}
+	{ src = "https://github.com/saghen/blink.cmp", name = "blinkcmp"},
+	{ src = "https://github.com/shaunsingh/nord.nvim", name = "nord"}
 })
 
 -- blink setup
@@ -59,6 +59,8 @@ local cmp = require('blink.cmp')
 ---@diagnostic disable-next-line: undefined-field
 cmp.build():pwait()
 cmp.setup()
+
+vim.cmd.colorscheme("nord")
 
 
 require("lazydev").setup({
@@ -91,8 +93,6 @@ vim.keymap.set("n", "<space>sd", function()
 		vim.cmd("lopen")
 	end
 )
-
-vim.cmd.colorscheme("rose-pine")
 
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
