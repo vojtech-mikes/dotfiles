@@ -125,3 +125,4 @@ if vim.g.have_nerd_font then
 	require("mini.icons").setup()
 end
 
+vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
