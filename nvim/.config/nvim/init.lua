@@ -50,8 +50,6 @@ vim.pack.add({
 	{ src = 'https://github.com/folke/lazydev.nvim', name = "lazydev"},
 	{ src = 'https://github.com/saghen/blink.lib', name = "blinklib"},
 	{ src = "https://github.com/saghen/blink.cmp", name = "blinkcmp"},
-	{ src = "https://github.com/shaunsingh/nord.nvim", name = "nord"},
-	{ src = "https://github.com/blazkowolf/gruber-darker.nvim", name = "gruber-darker"}
 })
 
 -- blink setup
@@ -62,7 +60,7 @@ cmp.build():pwait()
 cmp.setup()
 
 
-vim.cmd.colorscheme("gruber-darker")
+--- vim.cmd.colorscheme("gruber-darker")
 
 
 require("lazydev").setup({
@@ -128,3 +126,5 @@ if vim.g.have_nerd_font then
 end
 
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+
+vim.o.termguicolors = false
