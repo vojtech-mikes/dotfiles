@@ -8,6 +8,10 @@
       "rev": "c8fdc12c8a2fab6cf786dd7141a283f8079f902b",
       "src": "https://github.com/saghen/blink.lib"
     },
+    "gruber-darker": {
+      "rev": "83d99c0eb0fa2513fa5268d097194801fad26660",
+      "src": "https://github.com/blazkowolf/gruber-darker.nvim"
+    },
     "gruberdarker": {
       "rev": "83d99c0eb0fa2513fa5268d097194801fad26660",
       "src": "https://github.com/blazkowolf/gruber-darker.nvim"

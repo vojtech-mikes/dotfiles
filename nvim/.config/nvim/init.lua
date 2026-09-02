@@ -50,7 +50,8 @@ vim.pack.add({
 	{ src = 'https://github.com/folke/lazydev.nvim', name = "lazydev"},
 	{ src = 'https://github.com/saghen/blink.lib', name = "blinklib"},
 	{ src = "https://github.com/saghen/blink.cmp", name = "blinkcmp"},
-	{ src = "https://github.com/shaunsingh/nord.nvim", name = "nord"}
+	{ src = "https://github.com/shaunsingh/nord.nvim", name = "nord"},
+	{ src = "https://github.com/blazkowolf/gruber-darker.nvim", name = "gruber-darker"}
 })
 
 -- blink setup
@@ -60,7 +61,8 @@ local cmp = require('blink.cmp')
 cmp.build():pwait()
 cmp.setup()
 
-vim.cmd.colorscheme("nord")
+
+vim.cmd.colorscheme("gruber-darker")
 
 
 require("lazydev").setup({
