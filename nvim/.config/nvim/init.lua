@@ -50,6 +50,8 @@ vim.pack.add({
 	{ src = 'https://github.com/folke/lazydev.nvim', name = "lazydev"},
 	{ src = 'https://github.com/saghen/blink.lib', name = "blinklib"},
 	{ src = "https://github.com/saghen/blink.cmp", name = "blinkcmp"},
+	{ src = "https://github.com/xiyaowong/transparent.nvim", name = "transparent"},
+	{ src = "https://github.com/catppuccin/nvim", name = "catppuccin"}
 })
 
 -- blink setup
@@ -59,9 +61,7 @@ local cmp = require('blink.cmp')
 cmp.build():pwait()
 cmp.setup()
 
-
---- vim.cmd.colorscheme("gruber-darker")
-
+vim.cmd.colorscheme "catppuccin-mocha"
 
 require("lazydev").setup({
 	ft = "lua",
@@ -127,4 +127,4 @@ end
 
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
-vim.o.termguicolors = false
+vim.o.termguicolors = true
